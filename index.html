@@ -12,7 +12,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e6d7c3;
+            background: linear-gradient(135deg, #e6d7c3, #f3e7dc);
             color: #4b3832;
         }
 
@@ -73,36 +73,72 @@
         main {
             padding: 40px 20px;
             text-align: center;
-            background-color: #f9f2e9;
         }
 
-        main h2 {
+        section {
+            background: #fff5e4;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
             font-family: 'Amatic SC', cursive;
-            font-size: 2.5em;
+            font-size: 2.8em;
             color: #d4623f;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic-container {
+            display: flex;
+            justify-content: center;
             margin-bottom: 20px;
         }
 
         .profile-pic {
             border-radius: 50%;
             max-width: 150px;
-            margin-top: 20px;
             border: 5px solid #ffa500;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .gallery img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            margin: 15px;
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 300px;
             border-radius: 15px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
 
-        .gallery img:hover {
-            transform: scale(1.1) rotate(5deg);
+        .content img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-title {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .content div:hover .image-title {
+            opacity: 1;
         }
 
         footer {
@@ -126,61 +162,65 @@
 </head>
 <body>
     <header>
-        <h1>Carbon The Katz</h1>
-        <br>
-        <p>Welcome to Carbon's Official Website</p>
+        <h1>Carbon The Katz</h1>\<br>
+        <p id="greeting">Welcome to Carbon's Official Website</p>
     </header>
 
     <nav>
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#ref-sheet">Reference Sheet</a>
-        <a href="#contact">Card Design</a>
+        <a href="#about" onclick="smoothScroll(event, 'about')">About</a>
+        <a href="#gallery" onclick="smoothScroll(event, 'gallery')">Gallery</a>
+        <a href="#ref-sheet" onclick="smoothScroll(event, 'ref-sheet')">Reference Sheet</a>
+        <a href="#contact" onclick="smoothScroll(event, 'contact')">Card Design</a>
     </nav>
 
     <main>
         <!-- About Section -->
         <section id="about">
             <h2>About Carbon</h2>
-            <img src="Profile Pic.PNG" alt="Carbon Profile Picture" class="profile-pic">
+            <div class="profile-pic-container">
+                <img src="Profile Pic.PNG" alt="Carbon Profile Picture" class="profile-pic">
+            </div>
             <p>
                 Hey there! I’m <strong>Carbon</strong>, your friendly, mischievous internet cat with a flair for creativity! 
-                Welcome to my cozy little corner of the web where I share my <em>commissioned artwork</em>, 
-                <em>reference sheets</em>, and a sprinkle of everything that makes me, well, <strong>me!</strong> 
-                Whether you’re here to explore, admire, or just say hi, I’m thrilled to have you here!
+                Whether I’m daydreaming under pink clouds, leaping into artistic endeavors, or curling up with my thoughts, this space is all about 
+                celebrating the <em>purr-sonality</em> that makes me, well, <strong>me!</strong>
             </p>
         </section>
 
-       
-        <section id="gallery" class="gallery">
+        <!-- Gallery Section -->
+        <section id="gallery">
             <h2>Gallery</h2>
-            <img src="CatPinkCloud.png" alt="Carbon Image 1">
-            <img src="Profile Pic.PNG" alt="Carbon Profile Picture">
-            <img src="Full.PNG" alt="Carbon Full Image">
+            <div class="content">
+                <div style="position: relative;">
+                    <img src="CatPinkCloud.png" alt="Carbon Image 1">
+                    <span class="image-title">Art by @nolongeranimals</span>
+                </div>
+                <div style="position: relative;">
+                    <img src="Profile Pic.PNG" alt="Carbon Profile Picture">
+                    <span class="image-title">Art by @Wofychuu</span>
+                </div>
+                <div style="position: relative;">
+                    <img src="Full.PNG" alt="Carbon Full Image">
+                    <span class="image-title">Art by @venus.lostkidd</span>
+                </div>
+            </div>
         </section>
 
-       
-        <section id="ref-sheet" class="ref-sheet">
+        <!-- Reference Sheet Section -->
+        <section id="ref-sheet">
             <h2>Reference Sheet</h2>
-            <div style="text-align: center; margin-top: 20px;">
-                <div style="display: inline-block; padding: 20px; background: #ffe4b5; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <img src="CatRefSheet.png" alt="Carbon Reference Sheet" style="width: 100%; max-width: 500px; border: 5px solid #ffa500; border-radius: 15px;">
-                </div>
+            <div class="content">
+                <img src="CatRefSheet.png" alt="Carbon Reference Sheet">
             </div>
         </section>
 
-        
-        <section id="contact" class="contact">
+        <!-- Card Design Section -->
+        <section id="contact">
             <h2>Furum 2024 Card Design</h2>
-            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
-                <div style="padding: 20px; background: #ffe4b5; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <img src="CarbonCardDesign Front.png" alt="Carbon Card Front Design" style="width: 100%; max-width: 300px; border: 5px solid #ffa500; border-radius: 15px; transition: transform 0.3s;">
-                </div>
-                <div style="padding: 20px; background: #ffe4b5; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <img src="CarbonCardDesign Rear.png" alt="Carbon Card Rear Design" style="width: 100%; max-width: 300px; border: 5px solid #ffa500; border-radius: 15px; transition: transform 0.3s;">
-                </div>
+            <div class="content">
+                <img src="CarbonCardDesign Front.png" alt="Carbon Card Front Design">
+                <img src="CarbonCardDesign Rear.png" alt="Carbon Card Rear Design">
             </div>
-            
         </section>
     </main>
 
@@ -192,5 +232,24 @@
             <a href="https://bsky.app/profile/carbonthekatz.bsky.social" target="_blank">Bluesky</a>
         </p>
     </footer>
+
+    <script>
+        // Dynamic Greeting
+        const greetingElement = document.getElementById('greeting');
+        const hour = new Date().getHours();
+        if (hour < 12) {
+            greetingElement.textContent = 'Good morning! Welcome to Carbon\'s Official Website';
+        } else if (hour < 18) {
+            greetingElement.textContent = 'Good afternoon! Welcome to Carbon\'s Official Website';
+        } else {
+            greetingElement.textContent = 'Good evening! Welcome to Carbon\'s Official Website';
+        }
+
+        // Smooth Scroll Function
+        function smoothScroll(event, sectionId) {
+            event.preventDefault();
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>

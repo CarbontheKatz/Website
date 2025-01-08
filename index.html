@@ -6,105 +6,119 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Carbon The Katz</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: 'Verdana', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fafafa;
-            color: #333;
+            background-color: #e6d7c3;
+            color: #4b3832;
         }
+
         header {
             text-align: center;
-            padding: 2em 0;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            background-image: url('FAbanner.PNG'); /* Set the uploaded image as the banner */
+            padding: 3em 0;
+            background-image: url('FAbanner.PNG');
             background-size: cover;
             background-position: center;
             color: #fff;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
         }
-        header h1, header p {
-            background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 5px;
+
+        header h1 {
+            font-family: 'Amatic SC', cursive;
+            font-size: 3.5em;
             margin: 0;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 8px;
         }
+
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 15px;
+            display: inline-block;
+            border-radius: 8px;
+        }
+
         nav {
-            background: #333;
+            background: #4b3832;
             padding: 1em 0;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 20px;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
+            font-size: 1.3em;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
+
         nav a:hover {
-            color: #ffa500;
+            background: #ffa500;
+            transform: scale(1.1);
         }
+
         main {
             padding: 40px 20px;
             text-align: center;
-            background-color: #f9f9f9;
+            background-color: #f9f2e9;
         }
+
         main h2 {
-            color: #333;
+            font-family: 'Amatic SC', cursive;
+            font-size: 2.5em;
+            color: #d4623f;
             margin-bottom: 20px;
-            font-size: 2em;
-            border-bottom: 2px solid #ffa500;
-            display: inline-block;
-            padding-bottom: 5px;
         }
+
         .profile-pic {
             border-radius: 50%;
-            max-width: 120px;
+            max-width: 150px;
             margin-top: 20px;
-            border: 3px solid #ffa500;
+            border: 5px solid #ffa500;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .gallery img {
-            width: 300px; /* Set a fixed width */
-            height: 300px; /* Set a fixed height */
-            object-fit: cover; /* Ensures the image scales proportionally while filling the area */
-            margin: 15px auto;
-            display: inline-block;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
+
         .gallery img:hover {
-            transform: scale(1.05);
+            transform: scale(1.1) rotate(5deg);
         }
-        .ref-sheet img, .contact img {
-            width: 100%;
-            max-width: 400px;
-            margin: 15px auto;
-            display: inline-block;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .ref-sheet img:hover, .contact img:hover {
-            transform: scale(1.05);
-        }
+
         footer {
-            background: #333;
+            background: #4b3832;
             color: #fff;
             text-align: center;
             padding: 2em 0;
-            margin-top: 20px;
+            font-size: 0.9em;
         }
+
         footer a {
             color: #ffa500;
             text-decoration: none;
             margin: 0 10px;
-            font-size: 1.1em;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
@@ -125,33 +139,48 @@
     </nav>
 
     <main>
+        <!-- About Section -->
         <section id="about">
             <h2>About Carbon</h2>
-            <br>
             <img src="Profile Pic.PNG" alt="Carbon Profile Picture" class="profile-pic">
-            <br>
-            <p>Hello! I'm Carbon, a random cat on the internet. This site showcases my commissioned art, reference sheets, and more!</p>
+            <p>
+                Hey there! I’m <strong>Carbon</strong>, your friendly, mischievous internet cat with a flair for creativity! 
+                Welcome to my cozy little corner of the web where I share my <em>commissioned artwork</em>, 
+                <em>reference sheets</em>, and a sprinkle of everything that makes me, well, <strong>me!</strong> 
+                Whether you’re here to explore, admire, or just say hi, I’m thrilled to have you here!
+            </p>
         </section>
 
+       
         <section id="gallery" class="gallery">
             <h2>Gallery</h2>
-            <br>
             <img src="CatPinkCloud.png" alt="Carbon Image 1">
             <img src="Profile Pic.PNG" alt="Carbon Profile Picture">
             <img src="Full.PNG" alt="Carbon Full Image">
         </section>
 
+       
         <section id="ref-sheet" class="ref-sheet">
             <h2>Reference Sheet</h2>
-            <br>
-            <img src="CatRefSheet.png" alt="Carbon Reference Sheet">
+            <div style="text-align: center; margin-top: 20px;">
+                <div style="display: inline-block; padding: 20px; background: #ffe4b5; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <img src="CatRefSheet.png" alt="Carbon Reference Sheet" style="width: 100%; max-width: 500px; border: 5px solid #ffa500; border-radius: 15px;">
+                </div>
+            </div>
         </section>
 
+        
         <section id="contact" class="contact">
             <h2>Furum 2024 Card Design</h2>
-            <br>
-            <img src="CarbonCardDesign Front.png" alt="Carbon Card Front Design">
-            <img src="CarbonCardDesign Rear.png" alt="Carbon Card Rear Design">
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+                <div style="padding: 20px; background: #ffe4b5; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <img src="CarbonCardDesign Front.png" alt="Carbon Card Front Design" style="width: 100%; max-width: 300px; border: 5px solid #ffa500; border-radius: 15px; transition: transform 0.3s;">
+                </div>
+                <div style="padding: 20px; background: #ffe4b5; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <img src="CarbonCardDesign Rear.png" alt="Carbon Card Rear Design" style="width: 100%; max-width: 300px; border: 5px solid #ffa500; border-radius: 15px; transition: transform 0.3s;">
+                </div>
+            </div>
+            
         </section>
     </main>
 

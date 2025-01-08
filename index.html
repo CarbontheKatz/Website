@@ -14,18 +14,21 @@
             color: #333;
         }
         header {
-            background: linear-gradient(45deg, #ffa500, #ff7f50);
-            color: #fff;
             text-align: center;
             padding: 2em 0;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            background-image: url('FAbanner.PNG'); /* Set the uploaded image as the banner */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
         }
-        header h1 {
+        header h1, header p {
+            background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
             margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
         }
         nav {
             background: #333;
@@ -110,6 +113,7 @@
 <body>
     <header>
         <h1>Carbon The Katz</h1>
+        <br>
         <p>Welcome to Carbon's Official Website</p>
     </header>
 
@@ -123,7 +127,9 @@
     <main>
         <section id="about">
             <h2>About Carbon</h2>
+            <br>
             <img src="Profile Pic.PNG" alt="Carbon Profile Picture" class="profile-pic">
+            <br>
             <p>Hello! I'm Carbon, a random cat on the internet. This site showcases my commissioned art, reference sheets, and more!</p>
         </section>
 
@@ -133,9 +139,6 @@
             <img src="CatPinkCloud.png" alt="Carbon Image 1">
             <img src="Profile Pic.PNG" alt="Carbon Profile Picture">
             <img src="Full.PNG" alt="Carbon Full Image">
-            <!-- <img src="IMG_0635.PNG" alt="Carbon Image 2">
-            <img src="IMG_0636.PNG" alt="Carbon Image 3">
-            <img src="IMG_0637.PNG" alt="Carbon Image 4"> -->
         </section>
 
         <section id="ref-sheet" class="ref-sheet">

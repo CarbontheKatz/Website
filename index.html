@@ -162,7 +162,8 @@
 </head>
 <body>
     <header>
-        <h1>Carbon The Katz</h1>\<br>
+        <h1>Carbon The Katz</h1>
+        <br>
         <p id="greeting">Welcome to Carbon's Official Website</p>
     </header>
 
@@ -174,20 +175,13 @@
     </nav>
 
     <main>
-        <!-- About Section -->
         <section id="about">
             <h2>About Carbon</h2>
             <div class="profile-pic-container">
                 <img src="Profile Pic.PNG" alt="Carbon Profile Picture" class="profile-pic">
             </div>
-            <p>
-                Hey there! I’m <strong>Carbon</strong>, your friendly, mischievous internet cat with a flair for creativity! 
-                Whether I’m daydreaming under pink clouds, leaping into artistic endeavors, or curling up with my thoughts, this space is all about 
-                celebrating the <em>purr-sonality</em> that makes me, well, <strong>me!</strong>
-            </p>
+            <p>Hey there! I’m <strong>Carbon</strong>, your friendly, mischievous internet cat with a flair for creativity! Whether I’m daydreaming under pink clouds, leaping into artistic endeavors, or curling up with my thoughts, this space is all about celebrating the <em>purr-sonality</em> that makes me, well, <strong>me!</strong></p>
         </section>
-
-        <!-- Gallery Section -->
         <section id="gallery">
             <h2>Gallery</h2>
             <div class="content">
@@ -205,16 +199,12 @@
                 </div>
             </div>
         </section>
-
-        <!-- Reference Sheet Section -->
         <section id="ref-sheet">
             <h2>Reference Sheet</h2>
             <div class="content">
                 <img src="CatRefSheet.png" alt="Carbon Reference Sheet">
             </div>
         </section>
-
-        <!-- Card Design Section -->
         <section id="contact">
             <h2>Furum 2024 Card Design</h2>
             <div class="content">
@@ -234,7 +224,6 @@
     </footer>
 
     <script>
-        // Dynamic Greeting
         const greetingElement = document.getElementById('greeting');
         const hour = new Date().getHours();
         if (hour < 12) {
@@ -245,7 +234,6 @@
             greetingElement.textContent = 'Good evening! Welcome to Carbon\'s Official Website';
         }
 
-        // Smooth Scroll Function
         function smoothScroll(event, sectionId) {
             event.preventDefault();
             document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });

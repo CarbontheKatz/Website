@@ -59,7 +59,7 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 15px;
             font-size: 1.3em;
             padding: 10px 15px;
             border-radius: 8px;
@@ -69,6 +69,24 @@
         nav a:hover {
             background: #ffa500;
             transform: scale(1.1);
+        }
+
+        /* Responsive Navigation Menu */
+        @media screen and (max-width: 600px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 1em;
+            }
+
+            nav a {
+                font-size: 1em;
+                margin: 5px;
+                padding: 8px 10px;
+                flex: 1 0 45%;
+                text-align: center;
+            }
         }
 
         main {
